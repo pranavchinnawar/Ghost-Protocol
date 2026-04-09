@@ -1,63 +1,56 @@
 # 👻 Ghost Protocol
+> **Anonymous. Transient. Real-Time.**
 
 Ghost Protocol is a privacy-first, anonymous, real-time chat platform built with React, Node.js, and Socket.io. It features temporary sessions and zero permanent data storage — everything is stored exclusively in server RAM.
 
+🔗 **[Live Demo: ghost-protocol-khaki.vercel.app](https://ghost-protocol-khaki.vercel.app)**
+
+---
+
+## 📸 Screen Gallery
+
+| Landing Page | Chat Experience | Matchmaking Calls |
+| :---: | :---: | :---: |
+| ![Landing](/artifacts/landing_page_upgraded_1775638878849.png) | ![Multimedia](/artifacts/message_sent_upgraded_1775638961125.png) | ![Voice Call](/artifacts/ghost_voicenote_verify_1775646700855.webp) |
+
+---
+
 ## 🚀 Key Features
 
-- **Anonymous Identity**: No signup or login. A random "Ghost" identity is generated for you on every visit.
-- **Topic-Based Rooms**: Join specialized channels for Study, Stress relief, or Fun.
-- **Temporary Sessions**: Every chat room has a 15-minute countdown. When the timer hits zero, the room is deleted, and everyone is disconnected.
-- **Privacy-First**: No database, no logs, and no history. Once a session ends or the server restarts, all data vanishes.
-- **Premium Aesthetics**: A sleek dark mode UI with neon glows, animated particle backgrounds, and smooth transitions.
-- **Modern Interactions**:
-  - **Typing Indicators**: See when others are typing in real-time.
-  - **Reactions**: Double-click any message to add an emoji reaction.
-  - **Nickname Changes**: Edit your ghost name anytime via the header pencil icon.
-  - **Sound Effects**: Audio cues for new messages and user activity.
-  - **Panic Exit**: Instantly leave and clear your session with one click.
+- **🌐 Live Matchmaking Calls**: Find a "Ghost Frequency" and connect via P2P WebRTC audio with a random stranger globally.
+- **🎙️ Voice Ghost Notes**: Record and send transient audio clips with a sleek, pulsing recording interface.
+- **🖼️ Multimedia Sharing**: Instant image and audio file broadcasting (up to 2MB) with zero server-side storage.
+- **🎭 Anonymous Identity**: Automatic "Ghost" identities generated on every visit. No logs, no tracking.
+- **⏳ Temporary Sessions**: 15-minute room timers. When time is up, the room is purged and everyone is disconnected.
+- **⚡ Modern Interactions**:
+  - **Reactions**: Double-click any message to add high-impact emoji reactions.
+  - **Typing Indicators**: Real-time feedback when other ghosts are active.
+  - **Panic Exit**: Instantly clear your session and vanish with one click.
+  - **Sound Scape**: Immersive audio cues for a premium UX.
+
+---
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React.js, Vite, Socket.io-client, Lucide-React, CSS Transitions.
-- **Backend**: Node.js, Express, Socket.io.
-- **Storage**: In-Memory (JavaScript Objects/Arrays).
+- **Frontend**: React.js, Vite, Socket.io-client, Lucide-React, Web Audio API, WebRTC.
+- **Backend**: Node.js, Express, Socket.io (Configured for 2MB payloads).
+- **Styling**: Vanilla CSS (Custom Neon/Cyber-Ghost Design System).
 
-## 🔧 Installation & Setup
+## 🔧 Local Setup
 
-1. **Clone the repository** (or navigate to the project folder).
-2. **Setup the Backend**:
-   ```bash
-   cd backend
-   npm install
-   node server.js
-   ```
-   *The server will start on port 3001.*
+1. **Install Root**: `npm run install:all`
+2. **Start Backend**: `npm run dev:backend` (Port 3001)
+3. **Start Frontend**: `npm run dev:frontend` (Port 5173)
 
-3. **Setup the Frontend**:
-   ```bash
-   cd ../frontend
-   npm install
-   npm run dev
-   ```
-   *The app will be available at http://localhost:5173.*
+---
 
-## 📂 Project Structure
+## 🌎 Deployment (Vercel + Render)
 
-```text
-GhostProtocol/
-├── backend/
-│   ├── server.js        # Express & Socket.io logic + In-memory store
-│   └── package.json
-└── frontend/
-    ├── src/
-    │   ├── components/  # Header, MessageBubble, ParticleCanvas, etc.
-    │   ├── pages/       # LandingPage, TopicSelection, ChatRoom
-    │   ├── utils/       # Sound and helper utilities
-    │   ├── socket.js    # Socket.io configuration
-    │   ├── App.jsx      # Routing and State Management
-    │   └── index.css    # Premium Design System
-    └── package.json
-```
+Ghost Protocol uses a **Hybrid Deployment** setup:
+- **Backend (Render)**: Processes matchmaking and real-time signaling.
+- **Frontend (Vercel)**: Serves the high-speed React application.
 
-## 🔒 Security Note
-This project is for demonstration and temporary communication. It does not use end-to-end encryption (E2EE) but ensures privacy through **transience** — data that doesn't exist cannot be leaked.
+**Env Variable Required**: `VITE_BACKEND_URL` (Points to your Render instance).
+
+## 🔒 Security & Privacy
+This project is built for **transience**. All messages, images, and voice notes exist only in the temporary memory of active participants and are wiped as soon as the session expires. Data that doesn't exist cannot be leaked.
