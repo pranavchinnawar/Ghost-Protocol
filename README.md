@@ -11,7 +11,7 @@ Ghost Protocol is a privacy-first, anonymous, real-time chat platform built with
 
 | Landing Page | Chat Experience | Matchmaking Calls |
 | :---: | :---: | :---: |
-| ![Landing](GhostProtocol\Screen Images\landing.png) | ![Multimedia](GhostProtocol\Screen Images\Chating.png) | ![Voice Call](GhostProtocol\Screen Images\Voice.png) |
+| ![Landing](GhostProtocol/Screen Images/landing.png) | ![Multimedia](GhostProtocol/Screen Images/Chating.png) | ![Voice Call](GhostProtocol/Screen Images/Voice.png) |
 
 ---
 
